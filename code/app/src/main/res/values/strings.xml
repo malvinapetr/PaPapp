@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">PaPapp</string>
+    <string name="password_label">Password:</string>
+    <string name="password">Password:</string>
+    <string name="please_login_using_your_university_credentials">Please login using your University credentials!</string>
+    <string name="login">Login</string>
+    <string name="username">Username:</string>
+    <string name="username1">%s</string>
+    <string name="menu">Cafeteria Menu</string>
+    <string name="bus">Public Transport</string>
+    <string name="library">Library</string>
+    <string name="maps">Maps</string>
+    <string name="courses">Courses</string>
+    <string name="announcements">Announcements and Events</string>
+    <string name="settings">Settings/Preferences</string>
+    <string name="sound">SOUND</string>
+    <string name="language">Language</string>
+    <string name="dark">Dark Mode</string>
+    <string name="logout">Logout</string>
+    <string name="remember">Remember Me</string>
+    <string-array name="languages">
+            <item>English</item>
+            <item>Greek</item>
+        </string-array>
+
+
+</resources>
