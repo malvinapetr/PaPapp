@@ -18,6 +18,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -138,10 +139,11 @@ public class Settings extends AppCompatActivity {
         logout.setOnClickListener(view -> {
                 // Clear any user authentication data (e.g. session, token, etc.)
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.remove("email");
-                editor.remove("password");
+//                editor.remove("email");
+//                editor.remove("password");
                 editor.remove("rememberMe");
                 editor.remove("loggedIn");
+//                editor.remove("username");
                 editor.putBoolean("isDarkModeOn", switchCompat.isChecked());
                 editor.putString("language",languageSelected);
                 editor.apply();
@@ -151,6 +153,13 @@ public class Settings extends AppCompatActivity {
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 finish();
+        });
+
+        Button points = findViewById(R.id.points);
+        points.setOnClickListener(view -> {
+
+            Intent intent= new Intent(this, Points.class);
+            startActivity(intent);
         });
     };
 }

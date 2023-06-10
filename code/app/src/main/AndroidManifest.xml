@@ -1,22 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.papapp"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:supportsRtl="true"
         android:theme="@style/Theme.PaPapp"
+        tools:replace="android:appComponentFactory"
         tools:targetApi="31">
+
+
+        <!-- API KEY AT THE VALUE -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="" /> <!-- API KEY HERE -->
+
         <activity
             android:name=".HomeActivity"
+            android:exported="true" />
+
+        <!-- Maps -->
+        <activity
+            android:name=".MapsActivity"
             android:exported="false" />
+        <activity
+            android:name="com.google.android.libraries.places.widget.AutocompleteActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            tools:replace="android:theme" />
+
+        <!-- Subcategories of Maps -->
+        <activity
+            android:name=".Maps"
+            android:exported="true" />
+        <activity
+            android:name=".SearchOnMap"
+            android:exported="false" />
+        <!-- EndOf Map Classes     -->
+
+        <!-- Public Transport -->
+        <activity
+            android:name=".PublicTransport"
+            android:exported="true" />
+        <activity
+            android:name=".Stops"
+            android:exported="true" />
+        <!-- EndOf Public Transport Classes -->
+
+
+        <activity
+            android:name=".Points"
+            android:exported="true" />
+        <activity
+            android:name=".BookClassroom"
+            android:exported="true" />
+        <activity
+            android:name=".Profile"
+            android:exported="true" />
+        <activity
+            android:name=".AnnouncementActivity"
+            android:exported="true" />
+        <!-- Cafeteria Classes -->
+        <activity
+            android:name=".CafeteriaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CafeMenu"
+            android:exported="true" />
+        <activity
+            android:name=".BuyVouchers"
+            android:exported="true" />
+        <!-- EndOf Cafeteria Classes -->
         <activity
             android:name=".Settings"
             android:exported="false" />
+
+        <!-- Library Classes -->
+        <activity
+            android:name=".Library"
+            android:exported="false" />
+        <activity
+            android:name=".ManageAndRateTextbook"
+            android:exported="false" />
+        <activity
+            android:name=".FindReserveTextbook"
+            android:exported="true" />
+        <activity
+            android:name=".ShowLibrariesOnMap"
+            android:exported="false" />
+        <!-- EndOf Library Classes -->
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
